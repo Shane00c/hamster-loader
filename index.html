@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hamster Loader</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader_wrapper {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .loader_img {
+      width: 100%;
+      height: 100%;
+      animation: rotate 2s linear infinite;
+    }
+
+    .hamsterFill {
+      fill: #ffcc99;
+    }
+
+    .cls-4 {
+      stroke: #999;
+      stroke-width: 5px;
+      fill: none;
+    }
+
+    .legs {
+      stroke: #333;
+      stroke-width: 2px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader_wrapper">
+    <svg class="loader_img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <!-- Wheel -->
+      <circle id="wheel" cx="50" cy="50" r="45" class="cls-4"/>
+      
+      <!-- Hamster -->
+      <g id="hamster">
+        <circle class="hamsterFill" cx="50" cy="50" r="20"/>
+        <circle class="hamsterFill" cx="45" cy="45" r="3"/>
+        <circle class="hamsterFill" cx="55" cy="45" r="3"/>
+        <path d="M53 60 l5 5" class="legs cls-1"/>
+        <path d="M47 60 l-5 5" class="legs cls-2"/>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>
